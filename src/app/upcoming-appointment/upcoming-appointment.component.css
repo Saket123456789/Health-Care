@@ -1,0 +1,151 @@
+.appointments-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid #ececec;
+  margin-top: 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.card-header a {
+  text-decoration: none;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-top: 1px solid #f1f1f1;
+}
+
+.appointment-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.doctor-section {
+  display: flex;
+  gap: 16px;
+}
+
+.doctor-section img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.doctor-details p {
+  margin: 6px 0 12px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.appointment-info {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.appointment-info span {
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.hospital {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.status {
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 100px;
+  text-align: center;
+}
+
+.confirmed {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width: 992px) {
+
+  .appointment-item {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .status {
+    align-self: flex-start;
+  }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .appointments-card {
+    padding: 18px;
+  }
+
+  .doctor-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .doctor-section img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .doctor-details h3 {
+    font-size: 16px;
+  }
+
+  .appointment-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+}

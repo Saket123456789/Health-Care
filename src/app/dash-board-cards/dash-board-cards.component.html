@@ -1,0 +1,24 @@
+<div class="cards-container">
+
+  <div class="card" *ngFor="let card of cards">
+
+    <div class="card-left">
+
+      <div class="icon-box" [style.background]="card.bgColor">
+        <span>{{ card.icon }}</span>
+      </div>
+
+      <div class="card-content">
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p>
+      </div>
+
+    </div>
+
+    <div class="arrow">
+      →
+    </div>
+
+  </div>
+
+</div>

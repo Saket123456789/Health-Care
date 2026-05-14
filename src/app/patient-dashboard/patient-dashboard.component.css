@@ -8,3 +8,79 @@
   flex: 1;
   padding: 30px;
 }
+
+:host {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* ========================= */
+/* Main Content */
+/* ========================= */
+
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 24px;
+  overflow-x: hidden;
+}
+
+/* ========================= */
+/* Dashboard Grid */
+/* ========================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+/* ========================= */
+/* Large Tablet */
+/* ========================= */
+
+@media (max-width: 1200px) {
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width: 992px) {
+
+  .main-content {
+    margin-left: 90px;
+    padding: 20px;
+  }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  :host {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .dashboard-grid {
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+}

@@ -1,0 +1,51 @@
+<div class="appointments-card">
+
+  <div class="card-header">
+    <h2>Upcoming Appointments</h2>
+    <a href="#">View all</a>
+  </div>
+
+  <div
+    class="appointment-item"
+    *ngFor="let appointment of appointments"
+  >
+
+    <div class="doctor-section">
+
+      <img
+        [src]="appointment.image"
+        alt="doctor"
+      >
+
+      <div class="doctor-details">
+
+        <h3>{{ appointment.doctorName }}</h3>
+
+        <p>{{ appointment.specialization }}</p>
+
+        <div class="appointment-info">
+
+          <span>📅 {{ appointment.date }}</span>
+
+          <span>🕒 {{ appointment.time }}</span>
+
+        </div>
+
+        <div class="hospital">
+          📍 {{ appointment.hospital }}
+        </div>
+
+      </div>
+
+    </div>
+
+    <div
+      class="status"
+      [ngClass]="appointment.status.toLowerCase()"
+    >
+      {{ appointment.status }}
+    </div>
+
+  </div>
+
+</div>
