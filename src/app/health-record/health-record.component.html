@@ -1,0 +1,195 @@
+<div class="health-record-page">
+
+  <!-- TOP SECTION -->
+  <div class="top-section">
+
+    <button class="back-btn" (click)="goBack()">
+      ← Back
+    </button>
+
+  </div>
+
+  <!-- MAIN CARD -->
+  <div class="record-card">
+
+    <!-- HEADER -->
+    <div class="record-header">
+
+      <div>
+        <h1>Add Health Record</h1>
+
+        <p>
+          Enter your latest health details to keep track of your wellness.
+        </p>
+      </div>
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png"
+        class="header-image"
+        alt=""
+      />
+
+    </div>
+
+    <!-- FORM -->
+    <form>
+
+      <div class="form-layout">
+
+        <!-- LEFT SECTION -->
+        <div class="left-section">
+
+          <!-- BASIC HEALTH -->
+          <div class="section-title">
+            💙 Basic Health Details
+          </div>
+
+          <div class="grid-2">
+
+            <div class="form-group">
+              <label>Record Date</label>
+              <input type="date">
+            </div>
+
+            <div class="form-group">
+              <label>Record Time</label>
+              <input type="time">
+            </div>
+
+            <div class="form-group">
+              <label>Weight (kg)</label>
+              <input type="number" placeholder="70">
+            </div>
+
+            <div class="form-group">
+              <label>Height (cm)</label>
+              <input type="number" placeholder="175">
+            </div>
+
+          </div>
+
+          <!-- VITAL SIGNS -->
+          <div class="section-title mt">
+            ❤️ Vital Signs
+          </div>
+
+          <div class="grid-2">
+
+            <div class="form-group">
+              <label>Blood Pressure</label>
+              <input type="text" placeholder="120/80">
+            </div>
+
+            <div class="form-group">
+              <label>Heart Rate</label>
+              <input type="number" placeholder="78">
+            </div>
+
+            <div class="form-group">
+              <label>Sugar Level</label>
+              <input type="number" placeholder="95">
+            </div>
+
+            <div class="form-group">
+              <label>Oxygen Level (%)</label>
+              <input type="number" placeholder="98">
+            </div>
+
+            <div class="form-group full-width">
+              <label>Body Temperature (°F)</label>
+              <input type="number" placeholder="98.6">
+            </div>
+
+          </div>
+
+          <!-- LIFESTYLE -->
+          <div class="section-title mt">
+            🌿 Lifestyle Info
+          </div>
+
+          <div class="grid-2">
+
+            <div class="form-group">
+              <label>Water Intake (glasses)</label>
+              <input type="number" placeholder="6">
+            </div>
+
+            <div class="form-group">
+              <label>Sleep Duration (hours)</label>
+              <input type="number" placeholder="7.5">
+            </div>
+
+            <div class="form-group full-width">
+              <label>Physical Activity</label>
+
+              <select>
+                <option>30 mins walk</option>
+                <option>Gym Workout</option>
+                <option>Yoga</option>
+              </select>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT SECTION -->
+        <div class="right-section">
+
+          <div class="side-box">
+
+            <label>Symptoms (if any)</label>
+
+            <textarea rows="5"></textarea>
+
+          </div>
+
+          <div class="side-box">
+
+            <label>Notes</label>
+
+            <textarea rows="5"></textarea>
+
+          </div>
+
+          <div class="upload-box">
+
+            <div class="upload-icon">
+              📤
+            </div>
+
+            <h3>Upload Reports</h3>
+
+            <p>
+              Drag & Drop files here
+            </p>
+
+            <span>
+              JPG, PNG, PDF (Max 5MB)
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="button-section">
+
+        <button class="cancel-btn" (click)="goBack()">
+          Cancel
+        </button>
+
+        <button class="save-btn">
+          Save Health Record
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

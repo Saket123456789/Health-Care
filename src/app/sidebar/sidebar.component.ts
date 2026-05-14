@@ -33,7 +33,7 @@ export class SidebarComponent {
     },
     {
       title: 'Health Records',
-      route: '/patient/records',
+      route: '/health_Record',
       icon: '📋'
     },
     {
@@ -48,7 +48,7 @@ export class SidebarComponent {
     },
     {
       title: 'Profile',
-      route: '/patient/profile',
+      route: '/patient_profile',
       icon: '👤'
     },
     {
