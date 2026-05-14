@@ -1,0 +1,159 @@
+<!-- login.component.html -->
+
+<div class="login-wrapper">
+
+  <div class="login-card">
+
+    <!-- LOGO -->
+    <div class="logo-section">
+
+      <div class="logo-icon">
+        <i nz-icon nzType="heart" nzTheme="fill"></i>
+      </div>
+
+      <div>
+        <h1 class="brand-title">MediFlow</h1>
+        <p class="brand-subtitle">
+          Your Health, Our Priority
+        </p>
+      </div>
+
+    </div>
+
+    <!-- HEADING -->
+    <div class="heading-section">
+
+      <h2>Welcome Back</h2>
+
+      <p>
+        Login to your account to continue
+      </p>
+
+    </div>
+
+    <!-- FORM -->
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+      <!-- EMAIL -->
+      <div class="form-group">
+
+        <label>Email Address</label>
+
+        <div class="custom-input">
+
+          <i
+            nz-icon
+            nzType="mail"
+          ></i>
+
+          <input
+            type="email"
+            placeholder="Enter your email"
+            formControlName="email"
+          />
+
+        </div>
+
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="form-group">
+
+        <label>Password</label>
+
+        <div class="custom-input">
+
+          <i
+            nz-icon
+            nzType="lock"
+          ></i>
+
+          <input
+            [type]="passwordVisible ? 'text' : 'password'"
+            placeholder="Enter your password"
+            formControlName="password"
+          />
+
+          <i
+            nz-icon
+            class="eye-icon"
+            [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+            (click)="passwordVisible = !passwordVisible"
+          ></i>
+
+        </div>
+
+      </div>
+
+      <!-- FORGOT PASSWORD -->
+      <div class="forgot-password">
+
+        <a href="#">
+          Forgot Password?
+        </a>
+
+      </div>
+
+      <!-- LOGIN BUTTON -->
+      <button
+        nz-button
+        nzType="primary"
+        class="login-btn"
+        [disabled]="loginForm.invalid"
+      >
+        Login
+      </button>
+
+      <!-- DIVIDER -->
+      <div class="divider">
+
+        <span>or continue with</span>
+
+      </div>
+
+      <!-- GOOGLE -->
+      <button
+        type="button"
+        class="social-btn"
+      >
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/281/281764.png"
+          alt="google"
+        />
+
+        Continue with Google
+
+      </button>
+
+      <!-- MICROSOFT -->
+      <button
+        type="button"
+        class="social-btn"
+      >
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+          alt="microsoft"
+        />
+
+        Continue with Microsoft
+
+      </button>
+
+      <!-- SIGNUP -->
+      <div class="signup-text">
+
+        Don’t have an account?
+
+        <a (click)="onSigupPage()">
+          Sign up
+        </a>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

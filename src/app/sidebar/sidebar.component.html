@@ -1,0 +1,57 @@
+<aside class="sidebar">
+
+  <div class="logo-section">
+
+    <div class="logo-icon">
+      🏥
+    </div>
+
+    <div>
+      <h2>HealthCare</h2>
+      <p>Patient Portal</p>
+    </div>
+
+  </div>
+
+
+  <nav class="sidebar-menu">
+
+    <a
+      *ngFor="let item of menuItems"
+      [routerLink]="item.route"
+      routerLinkActive="active-menu"
+      class="menu-item"
+    >
+
+      <span class="menu-icon">
+        {{ item.icon }}
+      </span>
+
+      <span>
+        {{ item.title }}
+      </span>
+
+    </a>
+
+  </nav>
+
+
+  <div class="sidebar-footer">
+
+    <div class="support-card">
+
+      <h4>Need Help?</h4>
+
+      <p>
+        Contact support team for assistance.
+      </p>
+
+      <button>
+        Contact Support
+      </button>
+
+    </div>
+
+  </div>
+
+</aside>
