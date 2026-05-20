@@ -13,18 +13,9 @@ baseUrl : any;
   constructor(private httpClient : HttpClient, private configService: ConfigService) {
       this.baseUrl = this.configService.apiBaseUrl;
    }
-   
+  
 
-   loadConfig() {
-    return this.httpClient.get<any>('/assets/appConfig.json')
-      .toPromise()
-      .then(data => {
-        if (data) {
-          this.config = data;
-          this.baseUrl = data.apiBaseUrl;
-        }
-      });
-  }
+  
 
    signup(userData: any) {
     return this.httpClient.post(`${this.baseUrl}/auth/register`, userData);
