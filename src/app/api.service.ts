@@ -13,6 +13,7 @@ baseUrl : any;
   constructor(private httpClient : HttpClient, private configService: ConfigService) {
       this.baseUrl = this.configService.apiBaseUrl;
    }
+   
 
    loadConfig() {
     return this.httpClient.get<any>('/assets/appConfig.json')
