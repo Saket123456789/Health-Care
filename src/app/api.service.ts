@@ -1,14 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ConfigService } from './config.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
  
-  private baseUrl = 'http://localhost:8085/api'; // Replace with your actual API base URL
+baseUrl : any; 
+  config: Object | undefined;
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient : HttpClient, private configService: ConfigService) {
+      this.baseUrl = this.configService.apiBaseUrl;
+   }
+
+   loadConfig() {
+    return this.httpClient.get<any>('/assets/appConfig.json')
+      .toPromise()
+      .then(data => {
+        if (data) {
+          this.config = data;
+          this.baseUrl = data.apiBaseUrl;
+        }
+      });
+  }
 
    signup(userData: any) {
     return this.httpClient.post(`${this.baseUrl}/auth/register`, userData);
